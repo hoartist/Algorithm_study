@@ -3,13 +3,10 @@ class Solution:
         boxTypes.sort(key=lambda box: box[1], reverse=True)
         stuckCount = 0
         for box in boxTypes:
-            if(truckSize <= 0): break
-            
-            while(box[1] > 0):
+            while(box[0] > 0):
                 if(truckSize <= 0):
-                    break
-                stuckCount += box[0]
-                box[1] -= 1
+                    return stuckCount
+                stuckCount += box[1]
+                box[0] -= 1
                 truckSize -= 1
-                
-        print(stuckCount)
+        return stuckCount
