@@ -1,5 +1,3 @@
 # Algorithm_study
 
-<hr>
 
-- 
